@@ -1,0 +1,107 @@
+﻿@model IEnumerable<SystemInfo.Models.InformationModel>
+
+@{
+    ViewData["Title"] = "GetInfo";
+}
+
+<h2>GetInfo</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.OperatingSystem)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.InfoTitle)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FrameworkDescription)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OSArchitecture)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProcessArchitecture)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Memory)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IPAddressString)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.WeatherBy)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CurrentTemperature)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CurrentIcon)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DailySummary)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CurrentCity)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UnitOfMeasure)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.OperatingSystem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InfoTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FrameworkDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OSArchitecture)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProcessArchitecture)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Memory)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IPAddressString)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WeatherBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CurrentTemperature)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CurrentIcon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DailySummary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CurrentCity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnitOfMeasure)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
